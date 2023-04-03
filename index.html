@@ -3,16 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
 
     <title>Lösenords Generator</title>
   </head>
   <body>
-    Password Generator uvt1k5v3b28o87a Character Length Include Uppercase
-    Letters Include Lowercase Letters Include Numbers Include Symbols Strength
-    Generate
+    <div class="container">
+      <header>Password Generator</header>
+      <div class="passwordContainer">
+        <div class="passwordContent">
+        <div class="password" id="password">uvt1k5v3b28o87a</div>
+        <img src="images/copy-icon.svg" id="copy-icon" alt="Copy">
+        </div>
+      </div>
+      <div class="containerOfChoice">
+          <div class="contentOfChoice">
+            <div class="characterLenghtContent">
+              <div>Character Length</div>
+              <div id="rangeValue" style="font-size: 35px; color: #a638f6;">10</div>
+              <input type="range" min="0" max="20" value="10" class="slider" />
+            </div>
+            <form class="checkboxes">
+              <label>
+                <input type="checkbox" id="uppercase" name="uppercase" value="Uppercase">
+                Include Uppercase Letters
+              </label>
+            
+              <label>
+                <input type="checkbox" id="lettersInclude" name="lettersInclude" value="Letters Include">
+                Include Lowercase Letters
+              </label>
+            
+              <label>
+                <input type="checkbox" id="includeNumbers" name="includeNumbers" value="Include Numbers">
+                Include Numbers
+              </label>
+            
+              <label>
+                <input type="checkbox" id="includeSymbolsStrength" name="includeSymbolsStrength" value="Include Symbols Strength">
+                Include Symbols
+              </label>
+            </form>
+        <div class="strengthContainer">
+        <div class="strength" style="font-weight: bold;">
+          Strenght <span id="StrenghtValue">StrenghtValue </span>
 
-    <img src="./assets/images/techover-logo.png" alt="Techover Logo" />
+        </div>
+        </div>
+        <input type="submit" value="Generate">
+      </div>
+    </div>
+    <img src="./images/techover-logo.png" alt="Techover Logo" class="techoverLogo"/>
+  </div>
+  <script src="script.js"></script>
   </body>
 </html>
