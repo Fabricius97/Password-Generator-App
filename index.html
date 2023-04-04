@@ -16,7 +16,7 @@
       <header>Password Generator</header>
       <div class="passwordContainer">
         <div class="passwordContent">
-        <div class="password" id="password">uvt1k5v3b28o87a</div>
+        <div class="password" id="password"></div>
         <img src="images/copy-icon.svg" id="copy-icon" alt="Copy">
         </div>
       </div>
@@ -48,16 +48,23 @@
                 Include Symbols
               </label>
             </form>
-        <div class="strengthContainer">
-        <div class="strength" style="font-weight: bold;">
-          Strenght <span id="StrenghtValue">StrenghtValue </span>
-
-        </div>
-        </div>
-        <input type="submit" value="Generate">
+            <div class="strengthContainer">
+              <div class="strength">
+                <strong>Strength</strong>
+                <div class="barContainer">
+                <span id="strengthText"></span>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            </div>            
+        <button type="button" id="generatePasswordButton">Generate</button>
       </div>
+      </div>
+      <img src="./images/techover-logo.png" alt="Techover Logo" class="techoverLogo"/>
     </div>
-    <img src="./images/techover-logo.png" alt="Techover Logo" class="techoverLogo"/>
   </div>
   <script src="script.js"></script>
   </body>

@@ -1,4 +1,4 @@
-body, input[type="submit"] {
+body, button {
     margin: 0;
     padding: 0;
     background-color: #16111A;
@@ -10,11 +10,13 @@ body, input[type="submit"] {
     font-family: 'Titillium Web', sans-serif;
     letter-spacing: 4px;
     border: none;
+    font-size: 16px;
 }
 
 .container {
     max-width: 499px;
     max-height: 835px;
+    min-height: 650px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -44,6 +46,10 @@ body, input[type="submit"] {
     font-size: 20px;
 }
 
+.passwordContent img:hover {
+    cursor: pointer;
+}
+
 .containerOfChoice {
     background-color: #2d2039;
     height: 100%;
@@ -63,6 +69,27 @@ body, input[type="submit"] {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #16111A;
+    height: 7px;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+.slider:focus{
+    outline:none;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;    
 }
 
 .checkboxes {
@@ -96,37 +123,16 @@ input[type="checkbox"]:checked {
     border: none;
 }
 
+input:hover {
+    cursor: pointer;
+}
+
 .strength {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
-}
-
-.techoverLogo {
-    max-width: 300px;
-}
-  
-.slider{
-    -webkit-appearance: none;
-    background-color: #16111A;
-    height: 7px;
-    width: 100%;
-    margin: 10px auto;
-  }
-
-.slider:focus{
-    outline:none;
-  }
-
-.slider::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    cursor: pointer;
-     
+    padding: 0 20px;
+    align-items: center;
 }
   
 .strengthContainer {
@@ -137,12 +143,54 @@ input[type="checkbox"]:checked {
     align-items: center;
 }
 
-input[type="submit"] {
+.barContainer {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: white;
+}
+
+.bar {
+    width: 10px;
+    height: 35px;
+    background-color: transparent;
+    display: inline-block;
+    border: solid 1px white;
+  }
+
+button {
     height: 69px;
     background-color: #a638f6;
     font-size: 16px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.techoverLogo {
+    max-width: 300px;
+}
+  
+@media (max-width: 450px) {
+body {
+    font-size: 14px;
+    }
+
+.passwordContent {
+    font-size: 14px;
+    }
+}
+
+@media (max-width: 415px) {
+body {
+    font-size: 10px;
+    }
+
+.passwordContent {
+    font-size: 10px;
+    }
+}
 
   
 
